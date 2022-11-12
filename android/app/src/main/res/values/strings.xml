@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">navigation</string>
+    <string name="i_am_native">I am native!</string>
+    <string name="react_activity">React Activity</string>
+    <string name="native_activity">Native Activity</string>
+    <string name="pick_an_action">Pick an action</string>
+    <string name="back">back</string>
+</resources>
