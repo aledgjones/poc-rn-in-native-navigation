@@ -15,5 +15,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, NativeActivity::class.java)
             startActivity(intent)
         }
+
+        val button2 = findViewById<Button>(R.id.button2)
+        button2.setOnClickListener {
+            val intent = Intent(this, ReactActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
