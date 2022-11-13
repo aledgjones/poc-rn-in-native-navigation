@@ -17,9 +17,9 @@ private lateinit var reactRootView: ReactRootView
         super.onCreate(savedInstanceState)
         SoLoader.init(this, false)
         reactRootView = ReactRootView(this)
-        val packages: List<ReactPackage> = PackageList(application).packages
+        val packages: MutableList<ReactPackage> = PackageList(application).packages
         // Packages that cannot be autolinked yet can be added manually here, for example:
-        // packages.add(MyReactNativePackage())
+        packages.add(AppPackage())
         // Remember to include them in `settings.gradle` and `app/build.gradle` too.
         reactInstanceManager = ReactInstanceManager.builder()
             .setApplication(application)
