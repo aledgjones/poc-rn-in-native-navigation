@@ -14,7 +14,7 @@ class ReactActivity : AppCompatActivity(), DefaultHardwareBackBtnHandler {
 private lateinit var reactRootView: ReactRootView
     private lateinit var reactInstanceManager: ReactInstanceManager
     override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+        super.onCreate(null)
         SoLoader.init(this, false)
         reactRootView = ReactRootView(this)
         val packages: MutableList<ReactPackage> = PackageList(application).packages
