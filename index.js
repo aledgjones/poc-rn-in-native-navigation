@@ -1,12 +1,6 @@
 import React from "react";
-import {
-  AppRegistry,
-  Button,
-  StyleSheet,
-  Text,
-  View,
-  NativeModules,
-} from "react-native";
+import { NativeBaseProvider, Button, Text } from "native-base";
+import { AppRegistry, StyleSheet, View, NativeModules } from "react-native";
 
 const { NavigationModule } = NativeModules;
 
@@ -16,10 +10,14 @@ const HelloWorld = () => {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.hello}>I am React!</Text>
-      <Button onPress={back} title="Back" />
-    </View>
+    <NativeBaseProvider>
+      <View style={styles.container}>
+        <Text style={styles.hello}>I am React!</Text>
+        <Button onPress={back} uppercase>
+          BACK
+        </Button>
+      </View>
+    </NativeBaseProvider>
   );
 };
 var styles = StyleSheet.create({

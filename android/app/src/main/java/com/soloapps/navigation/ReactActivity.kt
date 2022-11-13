@@ -36,6 +36,27 @@ private lateinit var reactRootView: ReactRootView
         setContentView(reactRootView)
     }
 
+    override fun onPause() {
+        super.onPause()
+        reactInstanceManager.onHostPause(this)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        reactInstanceManager.onHostResume(this, this)
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        reactInstanceManager.onHostDestroy(this)
+        reactRootView.unmountReactApplication()
+    }
+
+    override fun onBackPressed() {
+        reactInstanceManager.onBackPressed()
+        super.onBackPressed()
+    }
+
     override fun invokeDefaultOnBackPressed() {
         super.onBackPressed()
     }
