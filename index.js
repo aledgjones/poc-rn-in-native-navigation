@@ -85,10 +85,19 @@ function BroadbandScreen() {
 
 const Stack = createNativeStackNavigator();
 
+const linking = {
+  prefixes: ["navigation://"],
+  config: {
+    screens: {
+      Broadband: "broadband",
+    },
+  },
+};
+
 const App = () => {
   return (
     <NativeBaseProvider>
-      <NavigationContainer>
+      <NavigationContainer linking={linking}>
         <Stack.Navigator screenOptions={{ headerShown: false }}>
           <Stack.Screen name="Home" component={HomeScreen} />
           <Stack.Screen name="TV" component={TVScreen} />

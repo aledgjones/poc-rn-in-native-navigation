@@ -54,7 +54,6 @@ private lateinit var reactRootView: ReactRootView
 
     override fun onBackPressed() {
         reactInstanceManager.onBackPressed()
-        super.onBackPressed()
     }
 
     override fun invokeDefaultOnBackPressed() {

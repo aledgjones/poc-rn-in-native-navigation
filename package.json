@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "start": "yarn react-native start",
-    "build": "npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/"
+    "build": "npx react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/",
+    "test:deep-link": "npx uri-scheme open navigation://broadband --android"
   },
   "dependencies": {
     "@react-navigation/native": "^6.0.13",
